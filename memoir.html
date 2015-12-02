@@ -4,117 +4,16 @@
 		<meta charset="utf-8">
 		<title>me-moi-R</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- normalize.css -- included in bootstrap.css		 -->
-		<link href="//normalize-css.googlecode.com/svn/trunk/normalize.css"  rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+ -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<link href="css/memoir.css" rel="stylesheet">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
-		<style type="text/css">
-			svg .yellow-red {
-				fill : yellow;
-				stroke : red;
-				stroke-width : 55;
-			}
-		</style>
-
-
  	</head>
  	<body>
-
-		<!-- 1. task : understand svg (12/1/2015) 		 -->
-
-<!--  	The d attribute is actually a string which contains a series of 
-		path descriptions. These paths consist of combinations 
-		the following instructions:
-
-			Moveto
-			Lineto
-			Curveto
-			Arcto
-			ClosePath -->
-
-<!-- 		<svg width="100%" height="100%" viewBox="0 0 400 400"
-			xmlns="http://www.w3.org/2000/svg">
-
-			<path d="M 100 100 L 300 100 L 200 300 z"></path>
-				
-		</svg>
-
-		(via mozilla developer network)
- -->
-
-		
-
-		<!--	why is this canvas here?	 -->
-		<!-- 	must be from when i started looking into computer graphics 
-			- thought svg but it turned out to be canvas - with keith peters' 
-			playing with chaos	 -->
-		<canvas>
-		</canvas>
-
-
-		<!-- this here is the time i spent looking up css tricks -->
-		<!-- 	learned how to create a drop shadow underneath the corner of a box / div !	 -->
-<!--  		<div class="box effect2">
- 			<h3>fish</h3>
- 		</div>
- -->
-
-		<script>
-
-			// replicated example at mdn using d3js		
-
-			var w = 1000;
-			var h = 1000;
-	
-			// svg @ interactive data visualization by scott murray 						
-// 			var dataset = [ 5, 10, 15, 20, 25 ];
-
-			var svg = d3.select("body")
-						.append("svg")
-						.attr("width", w)
-						.attr("height", h);
-
-// 			var circles = svg.selectAll("circle")
-//                  .data(dataset)
-//                  .enter()
-//                  .append("circle");
-
-
-// 			circles.attr("cx", function(d, i) {
-// 		            	return (i * 50) + 25;
-//         			})
-//        				.attr("cy", h/2)
-//        				.attr("r", function(d) {
-//     	        		return d;
-//        				});
-
-			// d3js - api - svg 			
-
-			var lineFunction = d3.svg.line()
-								.x(function(d) { return d.x; })
-								.y(function(d) { return d.y; })
-								.interpolate("linear");
-
-			var lineData = [ { "x": 1,   "y": 5},  { "x": 20,  "y": 20},
-								{ "x": 40,  "y": 10}, { "x": 60,  "y": 40},
-								{ "x": 80,  "y": 5},  { "x": 100, "y": 60} ];
-
-// 			<path d="M 100 100 L 300 100 L 200 300 z"></path>
-
-			var lineData = [ { "x": 100, "y": 100 }, 
-								{ "x": 300, "y": 100 }, 
-								{ "x": 200, "y": 300 } ];
-	
-
-			svg.append("path")
-						.attr("d", lineFunction(lineData) + "z")
-						.attr("stroke", "yellow")
-						.attr("stroke-width", 20)
-						.attr("fill", "red");
-
-		</script>
-
  	</body>
 </html>
