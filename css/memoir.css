@@ -1,7 +1,7 @@
-/* * {
+/** {
 	border: 1px solid red !important;
 }
- */
+*/
 .page-height {
 	height: 100%;
 }
@@ -18,5 +18,34 @@
 }
 
 .ginormous {
-	font-size: 36rem;
+	font-size: 18rem;
+	color: yellow;
 }
+
+.raised-corner {
+	position: relative;
+	background-color: #fff;
+	margin: 30px auto;
+	border: 1px solid rgba(125, 125, 125, 0.2);
+}
+
+.raised-corner:before, .raised-corner:after {
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 15px;
+	left: 10px;
+	width: 50%;
+	top: 80%;
+	max-width: 300px;
+	background: #777;
+	transform: rotate(-3deg);
+	box-shadow: 0 15px 10px #777;
+}
+
+.raised-corner:after {
+	transform: rotate(3deg);
+	right: 10px;
+	left: auto;
+}
+
