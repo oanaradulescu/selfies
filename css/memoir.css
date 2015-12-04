@@ -25,6 +25,9 @@
 .raised-corner {
 	position: relative;
 	background-color: #fff;
+}
+
+.pretty {
 	margin: 30px auto;
 	border: 1px solid rgba(125, 125, 125, 0.2);
 }
