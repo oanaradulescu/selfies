@@ -2,26 +2,54 @@
 	border: 1px solid red !important;
 }
 */
+
 .page-height {
 	height: 100%;
 }
 
-.center-child-divs {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/* among othe things, this height is required in order for raised-corner
+drop shadow to work, as the shadow's height is a pct of parent's height */
+
+.past-height {
+	height: 8em;
 }
 
-.open-sans {
+.open-sans-condensed {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 700;
 }
 
-.ginormous {
-	font-size: 18rem;
-	color: yellow;
+.past-font {
+	font-size: 4em;
+	color: rgb(190, 190, 190);
 }
 
+.background-quote-font {
+	font-size: 36em;
+	color: rgba(0, 0, 0, 1);
+	text-shadow: 0 0 20px grey;
+}
+
+/* today */
+
+.yellow-neon {
+	font-size: 36rem;
+	color: yellow;
+	-webkit-text-stroke: 1px white;
+	text-stroke: 1px white;
+	text-shadow: 0 0 40px yellow;
+}
+
+.center-child-divs {
+	-webkit-display: flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+/* a skeuomorphistic touch */
 .raised-corner {
 	position: relative;
 	background-color: #fff;
@@ -42,12 +70,12 @@
 	top: 80%;
 	max-width: 300px;
 	background: #777;
-	transform: rotate(-3deg);
+	transform: rotate(-5deg);
 	box-shadow: 0 15px 10px #777;
 }
 
 .raised-corner:after {
-	transform: rotate(3deg);
+	transform: rotate(5deg);
 	right: 10px;
 	left: auto;
 }
