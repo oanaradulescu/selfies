@@ -58,6 +58,7 @@ drop shadow to work, as the shadow's height is a pct of parent's height */
 .pretty {
 	margin: 30px auto;
 	border: 1px solid rgba(125, 125, 125, 0.2);
+	opacity: 0.97;
 }
 
 .raised-corner:before, .raised-corner:after {
